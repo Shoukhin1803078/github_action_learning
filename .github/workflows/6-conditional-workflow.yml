@@ -1,0 +1,33 @@
+name: Conditional Workflow
+
+# on:
+#   push:
+#     branches: 
+#       - main    
+
+# on:
+#   workflow_dispatch:
+
+on:
+  push:
+    paths:
+      - "backend/**" # If the path is changed,mane jodi backend folder e jodi kono file add hoy or kono kisu changes hoy tahole ei workflow ta trigger hobe  the workflow will be triggered. 
+
+jobs:
+  conditional-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Image Building
+        run: |
+          echo "Docker Image Building"
+
+      - name: Image Pushing
+        run: |
+          echo "Docker Image Pushing"
+
+
+
+    # uses: mokhlesurr031/gh-tutorial/.github/workflows/11-reusable-workflow.yml@main
