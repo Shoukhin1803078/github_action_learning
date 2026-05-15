@@ -9,7 +9,7 @@ on:
 #   workflow_dispatch:            # This is the event that will trigger the workflow manually
 
 jobs:
-  first-workflow:
+  first-workflow:                 # This is the name of the job
     runs-on: ubuntu-latest        # This is the runner that will run the job
 
     steps:

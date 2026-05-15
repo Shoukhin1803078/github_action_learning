@@ -1,10 +1,10 @@
 name: Manual Workflow
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:            # This is the event that will trigger the workflow manually
 
 jobs:
-  manual-workflow:
+  manual-workflow:               # This is the name of the job
     runs-on: ubuntu-latest
 
     steps:
