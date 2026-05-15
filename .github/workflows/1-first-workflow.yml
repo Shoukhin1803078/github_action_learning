@@ -2,15 +2,23 @@ name: First Workflow
 
 on:
   push:
-    branches:
-      - main
+    branches: 
+      - main                      # This is the branch that will trigger the workflow
+
+# on:
+#   workflow_dispatch:            # This is the event that will trigger the workflow manually
 
 jobs:
   first-workflow:
-    runs-on: ubuntu-latest #
+    runs-on: ubuntu-latest        # This is the runner that will run the job
 
     steps:
-      - name: First step
+      - name: First step          # This is the name of the step
+        run: |                    # This is the command to run '|' is used to run a multi-line command
+          echo "Hello, World!" 
+          echo "Hello Again!" 
+
+      - name: Second step
         run: |
-          echo "Hello, World!"
-          echo "Hello Again!"
+          echo "Hello, World! this is the second step"
+          echo "Hello Again! this is the second step"
