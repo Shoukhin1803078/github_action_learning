@@ -1,0 +1,10 @@
+name: Conditional Workflow
+
+on:
+  push:
+    paths:
+      - "backend/**"
+
+jobs:
+  conditional-workflow:
+    uses: mokhlesurr031/gh-tutorial/.github/workflows/11-reusable-workflow.yml@main
